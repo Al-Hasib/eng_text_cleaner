@@ -1,0 +1,4 @@
+nltk
+textblob
+
+-e .
