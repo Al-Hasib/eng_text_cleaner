@@ -19,7 +19,7 @@ def get_requirements(file_path:str)->List[str]:
 
 setup(
     name="eng_text_cleaner",  # Replace with your package name
-    version="0.0.1",  # Initial release version
+    version="0.0.2",  # Initial release version
     author="abdullah",  # Your name or organization
     author_email="alhasib.iu.cse@gmail.com",  # Your contact email
     description="This package is for clean the text as text processing",  # Short description
@@ -27,7 +27,7 @@ setup(
     long_description_content_type="text/markdown",  # Content type for long description
     url="https://github.com/Al-Hasib/eng_text_cleaner",  # URL to your project's homepage or repository
     packages=find_packages(),  # Automatically find and include all packages
-    install_requires=get_requirements("requirements.txt"),  # External dependencies your package needs
+    install_requires=['nltk','textblob'],  # External dependencies your package needs
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

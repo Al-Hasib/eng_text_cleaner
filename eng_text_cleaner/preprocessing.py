@@ -1,8 +1,12 @@
 import re
 import string
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from textblob import TextBlob 
+
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 class TextCleaner:
     '''Class for cleaning Text'''
