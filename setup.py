@@ -19,7 +19,7 @@ def get_requirements(file_path:str)->List[str]:
 
 setup(
     name="eng_text_cleaner",  # Replace with your package name
-    version="0.0.3",  # Initial release version
+    version="0.0.5",  # Initial release version
     author="abdullah",  # Your name or organization
     author_email="alhasib.iu.cse@gmail.com",  # Your contact email
     description="This package is for clean the text as text processing",  # Short description

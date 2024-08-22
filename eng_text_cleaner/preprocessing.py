@@ -3,10 +3,12 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from textblob import TextBlob 
+ 
 
 nltk.download('stopwords')
 nltk.download('wordnet')
+nltk.download('punkt')
+
 
 class TextCleaner:
     '''Class for cleaning Text'''
@@ -70,6 +72,7 @@ class TextCleaner:
     
     def spell_correction(self, text):
         '''Correction the spelling if needed'''
+        from textblob import TextBlob
         blob = TextBlob(text)
         return blob.correct()
 
@@ -77,6 +80,15 @@ class TextCleaner:
     def removing_stopwords(self, text):
         '''remove stopwords if not needed in the further works'''
         return ' '.join(word for word in text.split() if word not in self.stop_words)
+    
+
+    def stemmer(self,text):
+        '''perform porter stemmer on text'''
+        from nltk.stem import PorterStemmer
+        nltk.download('punkt')
+        stemmer = PorterStemmer()
+        return ' '.join(stemmer.stem(word) for word in text.split())
+
     
     
     def lemmatize_text(self, text):
@@ -101,6 +113,5 @@ class TextCleaner:
         text = re.sub(r'\s+', ' ', text).strip()
         text = ' '.join(word for word in text.split() if word not in self.stop_words)
         text = ' '.join(self.lemmatizer.lemmatize(word) for word in text.split())
-        text = self.spell_correction(text)
         
-        return str(text)
+        return text

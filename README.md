@@ -5,7 +5,7 @@ Text Cleaning is a common preprocessing technique for almost all NLP task. Mainl
 **Install the package**
 
 ```bash
-pip install eng_text_cleaner
+pip install eng-text-cleaner
 ```
 
 There has number of methods to clean the text such as removing emoji, punctuation, html_tags, urls, characters not words or digits or underscore, digits, stopwords, spell correction, lemmatize the words. One Method named clean text will apply all the methods to clean the text at a glance. Let's explore the simple package.
